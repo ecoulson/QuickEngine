@@ -1,0 +1,28 @@
+{
+  "name": "quick-engine",
+  "version": "1.0.0",
+  "description": "Minimalistic Game Engine ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecoulson/QuickEngine.git"
+  },
+  "keywords": [
+    "game_engine"
+  ],
+  "author": "Frosty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecoulson/QuickEngine/issues"
+  },
+  "homepage": "https://github.com/ecoulson/QuickEngine#readme",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "webpack": "^1.14.0"
+  }
+}
