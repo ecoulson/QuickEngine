@@ -14,6 +14,10 @@ class CanvasObj {
     }
   }
 
+  getBoundingRect() {
+    return this.getCanvas().getBoundingClientRect();
+  }
+
   clear() {
     let ctx = this.getContext();
     ctx.clearRect(0, 0, this.width, this.height);
@@ -36,9 +40,10 @@ class CanvasObj {
     ctx.closePath();
   }
 
-  drawText(text, x, y, color) {
+  drawText(text, x, y, color, style) {
     let ctx = this.getContext();
     ctx.fillStyle = color;
+    ctx.font = `${style.size}px ${style.font}`;
     ctx.fillText(text, x, y);
   }
 
@@ -48,4 +53,4 @@ class CanvasObj {
   }
 }
 
-export let Canvas = new CanvasObj('engine')
+export let Canvas = new CanvasObj('engine');

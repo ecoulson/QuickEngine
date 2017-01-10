@@ -8,10 +8,12 @@ export default class Game {
 
   render(dt) {
     Canvas.clear();
-    for (let i = 0; i < this.currentScene.drawQueue.size(); i++) {
-      let cb = this.currentScene.drawQueue.remove();
-      cb();
-      this.currentScene.drawQueue.add(cb);
+    if (!this.currentScene.uiActive()) {
+      for (let i = 0; i < this.currentScene.drawQueue.size(); i++) {
+        let cb = this.currentScene.drawQueue.remove();
+        cb();
+        this.currentScene.drawQueue.add(cb);
+      }
     }
   }
 
@@ -66,5 +68,9 @@ export default class Game {
 
   addListener(listener, handler) {
     Canvas.getCanvas().addEventListener(listener,handler);
+  }
+
+  getBoundingRect() {
+    return Canvas.getBoundingRect();
   }
 }

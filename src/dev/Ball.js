@@ -24,4 +24,10 @@ export default class Ball extends GameObject {
   render() {
     Canvas.drawCircle(this.x, this.y, 10, 'white');
   }
+
+  reset() {
+    this.x = Canvas.width / 2;
+    this.y = Canvas.height / 2;
+    this.vY = 0;
+  }
 }
